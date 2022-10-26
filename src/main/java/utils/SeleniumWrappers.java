@@ -124,5 +124,9 @@ public class SeleniumWrappers {
 		return driver.getCurrentUrl();
 	}
 	
+	public WebElement getElement(By locator) {
+		return driver.findElement(locator);
+	}
+	
 
 }
