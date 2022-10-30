@@ -1,11 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Suite1" parallel="tests" thread-count="2">
-    <test name="edge" >
-    	<parameter name = "browser" value = "edge" />
-    
+    <test name="Chrome" >
+    	
+    	<parameter name = "browser" value = "chrome" />
     
         <classes>
-            <class name="tests.JSExecutorExample" ></class>
+            <class name="tests.JsExecutorExample" ></class>
         </classes>
     </test>
+  
+
 </suite>
