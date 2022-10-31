@@ -5,7 +5,7 @@
     	<parameter name = "browser" value = "chrome" />
     
         <classes>
-            <class name="tests.JsExecutorExample" ></class>
+            <class name="tests.ScrollExample" ></class>
         </classes>
     </test>
   
