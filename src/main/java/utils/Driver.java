@@ -2,8 +2,10 @@ package utils;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,9 +20,13 @@ public class Driver {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver.set(new ChromeDriver());
+			driver.set(new ChromeDriver(getChromeOptions()));
 			driver.get().manage().window().maximize();
 			driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			// set window size
+			//driver.get().manage().window().setSize(new Dimension(800, 600));
+			
+			
 			
 			long chromeId = Thread.currentThread().getId();
 			System.out.println("Chrome--> Thread id = " + chromeId);
@@ -48,5 +54,14 @@ public class Driver {
 		
 		return driver.get();
 	}
+	
+		public static ChromeOptions getChromeOptions() {
+			ChromeOptions chromeOps = new ChromeOptions();
+			chromeOps.addArguments("--disable-infobars");
+			chromeOps.addArguments("--headless");
+			chromeOps.addArguments("--windows-size=1500, 1280");
+			return chromeOps;
+			
+		}
 
 }
