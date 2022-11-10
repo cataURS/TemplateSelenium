@@ -58,7 +58,7 @@ public class Driver {
 		public static ChromeOptions getChromeOptions() {
 			ChromeOptions chromeOps = new ChromeOptions();
 			chromeOps.addArguments("--disable-infobars");
-			chromeOps.addArguments("--headless");
+			//chromeOps.addArguments("--headless");
 			chromeOps.addArguments("--windows-size=1500, 1280");
 			return chromeOps;
 			

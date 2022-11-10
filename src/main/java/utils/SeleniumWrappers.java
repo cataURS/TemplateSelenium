@@ -141,5 +141,9 @@ public class SeleniumWrappers {
 		return driver.getCurrentUrl();
 	}
 	
+	public boolean validate(By locator) {
+		   return  driver.findElement(locator).isDisplayed();
+		}
+	
 
 }

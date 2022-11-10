@@ -21,8 +21,12 @@ public class NavMenuPage extends SeleniumWrappers{
 	public By loginLink = By.linkText("Login");
 	public By contactLink = By.linkText("CONTACTS");
 	public By blog = By.linkText("BLOG");
+	public By eventsLink = By.linkText("EVENTS");
 	public By blogClassic = By.linkText("Classic");
 	public By postFormats = By.linkText("Post Formats");
+	public By facebook = By.cssSelector("div[class='top_panel_top_socials'] a[href*='facebook']");
+	public By twitter = By.cssSelector("div[class='top_panel_top_socials'] a[href*='twitter']");
+	public By insta = By.cssSelector("div[class='top_panel_top_socials'] a[href*='instagram']");
 	
 
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
